@@ -44,6 +44,14 @@ struct AddMealView: View {
                     .padding()
                 
                 Button(action: {
+                    let foodEntryIsEmpty = food.isEmpty
+                    let calorieEntryIsEmpty = calorie.isEmpty
+                    
+                    if foodEntryIsEmpty && calorieEntryIsEmpty {
+                        foodHintText = "add food..."
+                        calorieHintText = "add calories..."
+                    }
+                    
                     if food.isEmpty {
                         foodHintText = "add food..."
                     } else if calorie.isEmpty {

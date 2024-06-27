@@ -38,7 +38,7 @@ struct ContentView: View {
                         Meals.showAddMealView.toggle()
                         print("the toggled value is now: \(Meals.showAddMealView)")
                     }, label: {
-                        Text("Add food")
+                        Image(systemName: "plus.circle")
                             .foregroundStyle(.black)
                             .bold()
                     })
